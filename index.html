@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint My Home</title>
+
+    <script src="https://kit.fontawesome.com/545f27c8fa.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/styles.css">
+
+</head>
+<body>
+    <video autoplay loop muted plays-inline class="background-video">
+        <source
+          src="public/bg-vid.mp4"
+          type="video/mp4" />
+      </video>
+  
+      <header>
+        <nav class="desktop-navbar">
+          <div class="desktop-cont">
+              <div class="logo"><img src="public/logo.png" width="60px"></div>
+              <div class="topnav" id="myTopnav">
+                  <a href="#home">Home</a>
+                  <div class="dopdown">
+                      <button class="dropbtn">Services 
+                          <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dopdown-content" >
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                      </div>
+                  </div>
+                  <div class="dopdown">
+                      <button class="dropbtn">Portfolio 
+                          <i class="fa fa-caret-down" ></i>
+                      </button>
+                      <div class="dopdown-content">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                      </div>
+                  </div>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+      
+                  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+              <div class="link">
+                  <div class="social-link">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="">                  <i class="fa-brands fa-instagram"></i>
+                      </a>
+                  </div>
+                  <div class="button">            <a><i class="ct-icon fas fa-phone"></i>
+                      Call Us</a></div>
+      
+              </div>
+          </div>
+      </nav>
+      
+      <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll(".dropdown");
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("click", function () {
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) {
+                            d.classList.remove("active");
+                        }
+                    });
+                    dropdown.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+    
+        <div class="mobile-navbar">
+          <div class="mobile-contain">
+      <div class="start-nav">
+          <div class="first">
+              <a href="" class="logo-container"><img src="public/logo.png" height="70px" loading="lazy" alt="logo"></a>
+          </div>
+      </div>
+      <div class="end-nav">
+          <div class="first">
+              <div class="ct-header1">
+                  <a href="" class="ct-button-con"><i class="ct-icon fas fa-phone"></i>Call Us</a>
+              </div>
+            
+            <span class="openbtn" onclick="openNav()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+          </span>
+          </div>
+      </div>
+          </div>
+          <div class="content-overlay" id="myNav">
+              <div class="mobile-content">
+                  <div class="close">
+                      <a href="javascript:void(0)" class="closebtn" style="font-size: 40px; color:white;" onclick="closeNav()">&times;</a>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+  
+                  <div class="mobile-content-inner">
+                      <a href="" class="logo-container mob"><img src="public/logo.png" width="2560" height="1280" loading="lazy" alt="logo"></a>
+                      <nav class="mobile-menu">
+                          <ul>
+                              <li class="menu-item"><a href="" class="menu-link active">Home</a></li>
+                              <li class="menu-item">
+                                  <span class="sub-menu">
+                                      <a href="" class="menu-link">Services</a>
+                                      <button class="dropdown" style="background: transparent;"><i class="fa-solid fa-plus rotate"></i>
+                                      </button>
+                                      
+                                  </span>
+                                  <ul class="sub-menu-links">
+                                      <li class="sub-menu-items">
+                                          <a href="" class="menu-link">Services 1</a>
+                                      </li><li class="sub-menu-items">
+                                          <a href="" class="menu-link">Services 1</a>
+                                      </li><li class="sub-menu-items">
+                                          <a href="" class="menu-link">Services 1</a>
+                                      </li><li class="sub-menu-items">
+                                          <a href="" class="menu-link">Services 1</a>
+                                      </li><li class="sub-menu-items">
+                                          <a href="" class="menu-link">Services 1</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="menu-item">
+                                  <span class="sub-menu">
+                                      <a href="" class="menu-link">Projects</a>
+                                      <button class="dropdown"><i class="fa-solid fa-plus rotate"></i></button>
+                                  </span>
+                                  <ul class="sub-menu-links">
+                                      <li class="sub-menu-items">
+                                          <a href="" class="menu-link">Projects 1</a>
+                                         </li>
+                                         <li class="sub-menu-items">
+                                          <a href="" class="menu-link">Projects 1</a>
+                                         </li><li class="sub-menu-items">
+                                          <a href="" class="menu-link">Projects 1</a>
+                                         </li>
+                                  </ul>
+                              </li>
+                             
+                              <li class="menu-item"><a href="" class="menu-link">About Us</a></li>
+                              <li class="menu-item"><a href="" class="menu-link">Contact Us</a></li>
+                          </ul>
+                      </nav>
+                      <div class="ct-header">
+                          <a href="" class="ct-button"><i class="ct-icon fas fa-phone"></i>Call Us</a>
+                      </div>
+                      <div class="ct-header">
+                          <a href="" class="ct-button"><i class="ct-icon fas fa-envelope"></i>Email Us</a>
+                      </div>
+                      <div class="ct-header-text">
+                          <div class="text-content">
+                              <p></p>
+                              <p style="text-align: left;"><strong>Free Quotes in Under 24 Hours</strong><br>
+                              <strong>Operating Hours</strong><br>
+                              Monday to Sunday: 8AM - 11PM
+                              </p>
+                          </div>
+                      </div>
+                      <div class="ct-header-socials">
+                          <div class="ct-socialbox">
+                              <a href="#"><span class="ct-icon-container"><i class="fa-brands fa-facebook"></i></span></a>
+                              <a href="#"><span class="ct-icon-container"><i class="fa-brands fa-instagram"></i></span></a>
+                          </div>
+                      </div>
+                  </div>
+         
+       </div>
+         </div>
+      </div>
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              const dropdowns = document.querySelectorAll(".sub-menu");
+  
+              dropdowns.forEach(dropdown => {
+                  dropdown.addEventListener("click", function() {
+                      const subMenu = this.closest(".menu-item").querySelector(".sub-menu-links");
+                      const icon = this.querySelector("i");
+  
+                      // Close any open submenu
+                      document.querySelectorAll(".sub-menu-links.active").forEach(activeSubMenu => {
+                          if (activeSubMenu !== subMenu) {
+                              activeSubMenu.classList.remove("active");
+                              activeSubMenu.previousElementSibling.querySelector("i").classList.remove("rotate-90");
+                          }
+                      });
+  
+                      // Toggle current submenu and rotate icon
+                      subMenu.classList.toggle("active");
+                      icon.classList.toggle("rotate-90");
+                  });
+              });
+          });
+      </script>
+      <script>
+  function openNav() {
+    document.getElementById("myNav").style.display = "block";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.display = "none";
+  }
+  
+          </script>
+     
+
+
+       </header>
+  
+      <section class="content">
+        <div class="hero-block">
+            <div class="cyan">    <h3>Sydney NO.1</h3><br>
+            </div>
+          <h1>Trusted</h1>
+          <h1>Painting Experts</h1>
+          
+          <br>
+          <p>Hassle Free, Mess Free, Hidden-Cost Free Transformations.</p>
+        
+          <span>            <i class="fa-solid fa-check"></i> Residential, Commercial & Strata.
+          </span><br>
+          <span>     <i class="fa-solid fa-check"></i> 20+ Years Experience.
+           </span><br>
+          <span> <i class="fa-solid fa-check"></i> Fully Licensed & Insured.</span>
+
+       <br>
+    
+          <br>
+          <a href="#" class="btn light"></a>
+      
+         </div>
+        
+      </section>
+
+      <section style="height: 100vh; background-color: antiquewhite;">
+  
+
+
+
+
+      </section>
+
+      <div class="scroller" data-speed="fast">
+        <ul class="tag-list scroller__inner">
+          <li>Interior Painting</li>
+          <li>Exterior Painting</li>
+          <li>Commercial Services</li>
+          <li>Residential Services</li>
+          <li>Wallpaper Removal</li>
+          <li>Color Consultation</li>
+          <li>Eco-Friendly Solutions</li>
+          <li>Deck and Fence Staining</li>
+        </ul>
+      </div>
+    
+      
+    
+      <section class="counter-section"> 
+      <div class="counter-wrapper">
+        <div class="counter">
+          <i class="fa-solid fa-paint-roller"></i>
+            <h1 class="count" data-target="1254">0</h1>
+            <p>New Visiters Every Week</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-heart"></i>
+            <h1 class="count" data-target="12168">0</h1>
+            <p>Happy customers every year</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-handshake"></i>
+            <h1 class="count" data-target="2172">0</h1>
+            <p>Won Amazing Awards</p>
+        </div>
+        <div class="counter">
+          <i class="fa-solid fa-user-tie"></i>
+            <h1 class="count" data-target="732">0</h1>
+            <p>New Listing Every Week</p>
+        </div>
+    </div>
+    </section>
+    
+
+      <div class="elementor-container">
+        <div class="element-row">
+            <div class="element-col">
+                <h4 class="element-text">Our class leading</h4>
+                <h2 class="element-text">Services</h2>
+                <button class="element-btn"><a href="#"> Get Quote</a></button>
+            </div>
+            <div class="element-col1">
+                <div class="element-card card1">
+                    <h5 class="element-text">Our class leading</h5>
+                    <p>Painting</p>
+                </div>
+                <div class="element-card card2">
+                    <h5 class="element-text">Our class leading</h5>
+                    <p>Painting</p>
+                </div>
+                <div class="element-card card3">
+                    <h5 class="element-text">Our class leading</h5>
+                    <p>Painting</p>
+                </div>
+                <div class="element-card card4">
+                    <h5 class="element-text">Our class leading</h5>
+                    <p>Painting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <footer class="footermain">
+        <section class="footer">
+          <div class="footer-row">
+            <div class="footer-col">
+                <h4>Our promise</h4>
+                <p><span style="color: inherit;">At Sydney Side Painting</span><br>
+                  We Provide Free Quotes - Within 24 hours. And, We'll beat any verifiable competitors quote by 10%.
+                </p>
+                <h4>Follow Us</h4>
+                <div class="icons" style="color: white; font-size: 50px;">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-instagram insta"></i>
+                  </div>
+            </div>
+      
+           
+    
+            
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="contact-ul"></ul>
+                <li class="contact-container" >
+                  <span class="container-svg">            
+                    <i class="fas fa-phone"></i>
+                  </span>
+                  <div class="contact-info">
+                            <span class="contact-title">Contact no:</span>
+                            <span class="contact-details">+61 490 1234 123</span>
+                  </div>
+                </li>
+                <li class="contact-container" >
+                  <span class="container-svg">            
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <div class="contact-info">
+                            <span class="contact-title">Email:</span>
+                            <span class="contact-details">nsw@gmail.com</span>
+                  </div>
+                </li>
+                <li class="contact-container">
+                  <span class="container-svg">            
+                    <i class="fa-solid fa-map-location-dot"></i>                  </span>
+                  <div class="contact-info">
+                            <span class="contact-title">Location:</span>
+                            <span class="contact-details">All over Sydney region</span>
+                  </div>
+                </li>
+                <li class="contact-container">
+                  <span class="container-svg">            
+                    <i class="fas fa-clock">  </i>
+                    </span>
+                  <div class="contact-info">
+                            <span class="contact-title">Opening hours: (Mon-Fri)</span>
+                            <span class="contact-details">8am-5pm</span>
+                  </div>
+                </li>
+                
+            </div>
+            <div class="footer-col">
+              <h4>Useful Links</h4>
+              <ul class="links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our portfolio</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Call Us</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul class="links">
+                  <li><a href="#">Interior Painting</a></li>
+                  <li><a href="#">Exterior Painting</a></li>
+                  <li><a href="#">Roof Painting</a></li>
+
+                  
+                </ul>
+              </div>
+      
+    
+            <div class="footer-col">
+              <h4>Newsletter</h4>
+              <p>
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
+              </p>
+              <form action="#">
+                <input type="text" placeholder="Your email" required>
+                <button type="submit">SUBSCRIBE</button>
+              </form>
+             
+            </div>
+          </div>
+          <br>
+          <div style="width: 100%; background-color: rgb(3, 3, 3); margin-top: 30px;">
+            <p style="color: white; text-align: center; padding: 10px;">&copy; 2022 All pictures used above are only used for personal purposes. All rights reservered.</p>
+    
+          </div>
+        </section>
+    </footer>
+    
+    <script src="script/main.js"></script>
+</body>
+</html>

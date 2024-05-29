@@ -1,0 +1,182 @@
+.background-video {
+    
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  video {
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+  @media (min-aspect-ratio: 16/9) {
+    .background-video {
+      width: 100%;
+      left: 0;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  
+  @media (max-aspect-ratio: 4/3) {
+    .background-video {
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* Scroller Styles */
+
+.scroller {
+  margin: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .scroller__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    animation: scroll var(--_animation-duration, 40s) linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Tag List Styles */
+  
+  .tag-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tag-list li {
+    list-style: circle;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;    font-size: 55px;
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    white-space: nowrap;
+    font-weight: 500;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+        color: transparent;
+        transition: all 0.5s ease;
+      
+  }
+  
+  /* General Styles */
+  
+  :root {
+    --clr-neutral-100: #000000;
+    --clr-primary-400: none;
+  }
+  
+  .mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
